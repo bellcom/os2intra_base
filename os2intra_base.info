@@ -1,12 +1,15 @@
 name = OS2intra base
 description = Includes all basic OS2intra related OG stuff
 core = 7.x
-package = OS2web - Intranet
+package = OS2Web - Intranet
 php = 5.2.4
 version = 7.x-1.0-beta1
 project = os2intra_base
+dependencies[] = ctools
 dependencies[] = features
+dependencies[] = homebox
 dependencies[] = homebox_og
+dependencies[] = options
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = views_content

@@ -80,6 +80,18 @@ function os2intra_base_homebox() {
         'title' => '',
         'weight' => -20,
       ),
+      'views_7732143edc5e5a96528c9ad88958a764' => 
+      array (
+        'module' => 'views',
+        'delta' => '7732143edc5e5a96528c9ad88958a764',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => '',
+        'weight' => -26,
+      ),
     ),
     'widths' => 
     array (
@@ -138,6 +150,18 @@ function os2intra_base_homebox() {
         'closable' => 1,
         'title' => '',
         'weight' => -19,
+      ),
+      'views_9e669ba41e5460dbfef4caed8d3efc37' => 
+      array (
+        'module' => 'views',
+        'delta' => '9e669ba41e5460dbfef4caed8d3efc37',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => '',
+        'weight' => -26,
       ),
     ),
     'widths' => 
