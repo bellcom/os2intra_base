@@ -5,3 +5,17 @@
  */
 
 include_once 'os2intra_base.features.inc';
+
+function os2intra_base_views_pre_render(&$view) {
+   if($view->name == "os2intra_group_term_activity" && !empty($view->result)) {
+       // Only show results which the user is allowed to.
+       $group_memberships = og_get_groups_by_user();
+       if(!empty($group_memberships)) {
+       foreach($view->result as $i => $row) {
+           if (!in_array($row->node_og_membership__og_membership_gid, $group_memberships['node'])) {
+           	unset($view->result[$i]);
+           }
+       }
+       }
+   }
+}
