@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_api().
  */
-function os2intra_base_views_api() {
+function os2intra_base_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -32,53 +32,17 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
-      'shortcut_shortcuts' => 
+      'views_os2intra_user_groups-block_1' => 
       array (
-        'module' => 'shortcut',
-        'delta' => 'shortcuts',
-        'region' => 1,
+        'module' => 'views',
+        'delta' => 'os2intra_user_groups-block_1',
+        'region' => 2,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => '',
-        'weight' => -20,
-      ),
-      'user_online' => 
-      array (
-        'module' => 'user',
-        'delta' => 'online',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -20,
-      ),
-      'user_new' => 
-      array (
-        'module' => 'user',
-        'delta' => 'new',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -20,
-      ),
-      'node_recent' => 
-      array (
-        'module' => 'node',
-        'delta' => 'recent',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -20,
+        'title' => 'Dine Grupper',
+        'weight' => -28,
       ),
       'views_7732143edc5e5a96528c9ad88958a764' => 
       array (
@@ -89,8 +53,32 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
+        'title' => 'Begivenheder',
+        'weight' => -27,
+      ),
+      'user_online' => 
+      array (
+        'module' => 'user',
+        'delta' => 'online',
+        'region' => 4,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
         'title' => '',
-        'weight' => -26,
+        'weight' => -25,
+      ),
+      'views_os2intra_canteen_menu-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_canteen_menu-block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => '',
+        'weight' => -22,
       ),
     ),
     'widths' => 
@@ -127,6 +115,18 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'views_13f4c793db1c934a1e6735527564e620' => 
+      array (
+        'module' => 'views',
+        'delta' => '13f4c793db1c934a1e6735527564e620',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Begivenheder',
+        'weight' => -27,
+      ),
       'commons_utility_links_commons_utility_links' => 
       array (
         'module' => 'commons_utility_links',
@@ -136,32 +136,8 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => '',
+        'title' => 'Links',
         'weight' => -19,
-      ),
-      'user_online' => 
-      array (
-        'module' => 'user',
-        'delta' => 'online',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -19,
-      ),
-      'views_9e669ba41e5460dbfef4caed8d3efc37' => 
-      array (
-        'module' => 'views',
-        'delta' => '9e669ba41e5460dbfef4caed8d3efc37',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -26,
       ),
     ),
     'widths' => 
