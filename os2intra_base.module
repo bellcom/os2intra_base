@@ -12,7 +12,7 @@ function os2intra_base_views_pre_render(&$view) {
        $group_memberships = og_get_groups_by_user();
        if(!empty($group_memberships['node'])) {
 	       foreach($view->result as $i => $row) {
-	           if (!in_array($row->node_og_membership__og_membership_gid, $group_memberships['node'])) {
+	           if (!in_array((int) $row->node_og_membership_nid, $group_memberships['node'])) {
 	           	unset($view->result[$i]);
 	           }
 	       }
