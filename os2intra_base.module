@@ -6,21 +6,46 @@
 
 include_once 'os2intra_base.features.inc';
 
+/**
+ * Implements hook_views_pre_render().
+ */
 function os2intra_base_views_pre_render(&$view) {
-   if($view->name == "os2intra_group_term_activity" && !empty($view->result)) {
-       // Only show results which the user is allowed to.
-       $group_memberships = og_get_groups_by_user();
-       if(!empty($group_memberships['node'])) {
-	       foreach($view->result as $i => $row) {
-	           if (!in_array((int) $row->node_og_membership_nid, $group_memberships['node'])) {
-	           	unset($view->result[$i]);
-	           }
-	       }
-       }
-   }
+  if($view->name == "os2intra_group_term_activity" && !empty($view->result)) {
+    // Only show results which the user is allowed to.
+    $group_memberships = og_get_groups_by_user();
+    if(!empty($group_memberships['node'])) {
+      foreach($view->result as $i => $row) {
+        if (!in_array((int) $row->node_og_membership_nid, $group_memberships['node'])) {
+          unset($view->result[$i]);
+        }
+      }
+    }
+  }
+}
+/**
+ * Implements hook_block_info().
+ */
+function os2intra_base_block_info() {
+  $blocks = array();
+  $blocks['os2intra_homebox_front'] = array(
+    'info' => t('Homebox frontpage block'),
+  );
+  $blocks['os2intra_homebox_group'] = array(
+    'info' => t('Homebox group block'),
+  );
+  return $blocks;
 }
 
-
-function mytools_form_alter(&$form, $form_state, $form_id) {
- error_log($form_id);
+/**
+ * Implements hook_block_view().
+ */
+function os2intra_base_block_view($delta='') {
+  $block = array();
+  switch($delta) {
+    case 'homebox_front_block' :
+    case 'homebox_group_block' :
+      $block['content'] = homebox_build(homebox_get_page($delta));
+      break;
+  }
+  return $block;
 }
