@@ -319,11 +319,6 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Overskrift: Global: View-område */
-  $handler->display->display_options['header']['view']['id'] = 'view';
-  $handler->display->display_options['header']['view']['table'] = 'views';
-  $handler->display->display_options['header']['view']['field'] = 'view';
-  $handler->display->display_options['header']['view']['view_to_insert'] = 'os2intra_message_notifications:block';
   /* Opførsel ved ingen resultater: Global: Tekstområde */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
