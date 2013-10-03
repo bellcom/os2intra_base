@@ -42,8 +42,8 @@ function os2intra_base_block_info() {
 function os2intra_base_block_view($delta='') {
   $block = array();
   switch($delta) {
-    case 'homebox_front_block' :
-    case 'homebox_group_block' :
+    case 'os2intra_homebox_front' :
+    case 'os2intra_homebox_group' :
       $block['content'] = homebox_build(homebox_get_page($delta));
       break;
   }
