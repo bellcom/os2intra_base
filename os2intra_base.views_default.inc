@@ -296,6 +296,7 @@ function os2intra_base_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'OS2intra Group Term Activity';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'none';
@@ -871,6 +872,12 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Felt: Bruger: Phone */
+  $handler->display->display_options['fields']['field_os2intra_phone']['id'] = 'field_os2intra_phone';
+  $handler->display->display_options['fields']['field_os2intra_phone']['table'] = 'field_data_field_os2intra_phone';
+  $handler->display->display_options['fields']['field_os2intra_phone']['field'] = 'field_os2intra_phone';
+  $handler->display->display_options['fields']['field_os2intra_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_os2intra_phone']['element_label_colon'] = FALSE;
   /* Felt: Bruger: Billede */
   $handler->display->display_options['fields']['picture']['id'] = 'picture';
   $handler->display->display_options['fields']['picture']['table'] = 'users';

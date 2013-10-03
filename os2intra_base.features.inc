@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_api().
  */
-function os2intra_base_views_api($module = NULL, $api = NULL) {
+function os2intra_base_views_api() {
   return array("api" => "3.0");
 }
 
@@ -18,7 +18,7 @@ function os2intra_base_homebox() {
   $homeboxes = array();
 
   $homeboxes['os2intra_homebox_front'] = array (
-    'regions' => 4,
+    'regions' => 2,
     'cache' => 0,
     'color' => 0,
     'colors' => 
@@ -32,6 +32,42 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'os2intra_birthday_block_block' => 
+      array (
+        'module' => 'os2intra_birthday_block',
+        'delta' => 'block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Fødselsdage',
+        'weight' => -31,
+      ),
+      'views_os2intra_users_search-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_users_search-block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Brugere',
+        'weight' => -30,
+      ),
+      'user_online' => 
+      array (
+        'module' => 'user',
+        'delta' => 'online',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => '',
+        'weight' => -29,
+      ),
       'views_os2intra_user_groups-block_1' => 
       array (
         'module' => 'views',
@@ -48,7 +84,7 @@ function os2intra_base_homebox() {
       array (
         'module' => 'views',
         'delta' => 'os2intra_users_content-block',
-        'region' => 3,
+        'region' => 2,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
@@ -68,18 +104,6 @@ function os2intra_base_homebox() {
         'title' => 'Begivenheder',
         'weight' => -27,
       ),
-      'user_online' => 
-      array (
-        'module' => 'user',
-        'delta' => 'online',
-        'region' => 4,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -29,
-      ),
       'views_os2intra_canteen_menu-block' => 
       array (
         'module' => 'views',
@@ -89,28 +113,14 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => '',
+        'title' => 'Dagens ret',
         'weight' => -22,
-      ),
-      'views_os2intra_users_search-block' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_users_search-block',
-        'region' => 4,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => '',
-        'weight' => -30,
       ),
     ),
     'widths' => 
     array (
       1 => 50,
       2 => 50,
-      3 => 50,
-      4 => 50,
     ),
     'title' => 'Din forside',
     'path' => 'front',
@@ -125,7 +135,7 @@ function os2intra_base_homebox() {
   );
 
   $homeboxes['os2intra_homebox_group'] = array (
-    'regions' => 4,
+    'regions' => 2,
     'cache' => 0,
     'color' => 0,
     'colors' => 
@@ -143,7 +153,7 @@ function os2intra_base_homebox() {
       array (
         'module' => 'views',
         'delta' => 'os2intra_group_members-block',
-        'region' => 3,
+        'region' => 2,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
@@ -180,8 +190,6 @@ function os2intra_base_homebox() {
     array (
       1 => 50,
       2 => 50,
-      3 => 50,
-      4 => 50,
     ),
     'title' => 'Din gruppe',
     'path' => 'dingruppe',
