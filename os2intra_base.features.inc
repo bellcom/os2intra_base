@@ -44,6 +44,18 @@ function os2intra_base_homebox() {
         'title' => 'Dine Grupper',
         'weight' => -28,
       ),
+      'views_os2intra_users_content-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_users_content-block',
+        'region' => 3,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Indlæg du har oprettet.',
+        'weight' => -28,
+      ),
       'views_7732143edc5e5a96528c9ad88958a764' => 
       array (
         'module' => 'views',
@@ -66,7 +78,7 @@ function os2intra_base_homebox() {
         'open' => 1,
         'closable' => 1,
         'title' => '',
-        'weight' => -25,
+        'weight' => -29,
       ),
       'views_os2intra_canteen_menu-block' => 
       array (
@@ -79,6 +91,18 @@ function os2intra_base_homebox() {
         'closable' => 1,
         'title' => '',
         'weight' => -22,
+      ),
+      'views_os2intra_users_search-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_users_search-block',
+        'region' => 4,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => '',
+        'weight' => -30,
       ),
     ),
     'widths' => 
@@ -115,6 +139,18 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'views_os2intra_group_members-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_group_members-block',
+        'region' => 3,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Gruppens medlemmere',
+        'weight' => -31,
+      ),
       'views_13f4c793db1c934a1e6735527564e620' => 
       array (
         'module' => 'views',

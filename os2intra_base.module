@@ -19,3 +19,8 @@ function os2intra_base_views_pre_render(&$view) {
        }
    }
 }
+
+
+function mytools_form_alter(&$form, $form_state, $form_id) {
+ error_log($form_id);
+}
