@@ -11,7 +11,11 @@ include_once 'os2intra_base.features.inc';
  */
 function os2intra_base_init(){
   global $user;
-  if ($user->uid == 0 && current_path() !== 'user/login') {
+  $allowed_paths = array(
+    'user/login',
+    'user/password',
+  );
+  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
   }
 }
