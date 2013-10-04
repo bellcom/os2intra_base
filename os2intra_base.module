@@ -7,6 +7,16 @@
 include_once 'os2intra_base.features.inc';
 
 /**
+ * Implements hook_init();
+ */
+function MODULE_init(){
+  global $user;
+  if ($user->uid == 0) {
+    drupal_goto('user/login');
+  }
+}
+
+/**
  * Implements hook_views_pre_render().
  */
 function os2intra_base_views_pre_render(&$view) {
