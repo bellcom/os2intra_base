@@ -15,7 +15,7 @@ function os2intra_base_init(){
     'user/login',
     'user/password',
   );
-  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths) {
+  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths)) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
   }
 }
