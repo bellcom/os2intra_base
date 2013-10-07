@@ -32,6 +32,78 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'views_os2intra_random_user-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_random_user-block',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Tilfældige brugere',
+        'weight' => -37,
+      ),
+      'views_os2intra_widgets-block_2' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_widgets-block_2',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Intern Høring',
+        'weight' => -37,
+      ),
+      'views_os2intra_widgets-block_1' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_widgets-block_1',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Markedsplads',
+        'weight' => -37,
+      ),
+      'views_os2intra_widgets-block_3' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_widgets-block_3',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Seneste referater',
+        'weight' => -37,
+      ),
+      'homebox_custom' => 
+      array (
+        'module' => 'homebox',
+        'delta' => 'custom',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Mine Notater',
+        'weight' => -34,
+      ),
+      'views_os2intra_user_groups-block_1' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_user_groups-block_1',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 0,
+        'title' => 'Dine Grupper',
+        'weight' => -34,
+      ),
       'os2intra_birthday_block_block' => 
       array (
         'module' => 'os2intra_birthday_block',
@@ -42,7 +114,7 @@ function os2intra_base_homebox() {
         'open' => 1,
         'closable' => 1,
         'title' => 'Fødselsdage',
-        'weight' => -31,
+        'weight' => -33,
       ),
       'views_os2intra_users_search-block' => 
       array (
@@ -54,6 +126,30 @@ function os2intra_base_homebox() {
         'open' => 1,
         'closable' => 1,
         'title' => 'Brugere',
+        'weight' => -32,
+      ),
+      'views_7732143edc5e5a96528c9ad88958a764' => 
+      array (
+        'module' => 'views',
+        'delta' => '7732143edc5e5a96528c9ad88958a764',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Begivenheder',
+        'weight' => -31,
+      ),
+      'views_os2intra_canteen_menu-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_canteen_menu-block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Dagens ret',
         'weight' => -30,
       ),
       'user_online' => 
@@ -68,18 +164,6 @@ function os2intra_base_homebox() {
         'title' => '',
         'weight' => -29,
       ),
-      'views_os2intra_user_groups-block_1' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_user_groups-block_1',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Dine Grupper',
-        'weight' => -28,
-      ),
       'views_os2intra_users_content-block' => 
       array (
         'module' => 'views',
@@ -91,30 +175,6 @@ function os2intra_base_homebox() {
         'closable' => 1,
         'title' => 'Indlæg du har oprettet.',
         'weight' => -28,
-      ),
-      'views_7732143edc5e5a96528c9ad88958a764' => 
-      array (
-        'module' => 'views',
-        'delta' => '7732143edc5e5a96528c9ad88958a764',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Begivenheder',
-        'weight' => -27,
-      ),
-      'views_os2intra_canteen_menu-block' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_canteen_menu-block',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Dagens ret',
-        'weight' => -22,
       ),
     ),
     'widths' => 
@@ -149,17 +209,53 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
-      'views_os2intra_group_members-block' => 
+      'views_os2intra_widgets-block_2' => 
       array (
         'module' => 'views',
-        'delta' => 'os2intra_group_members-block',
+        'delta' => 'os2intra_widgets-block_2',
         'region' => 2,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
         'closable' => 1,
+        'title' => 'Intern Høring',
+        'weight' => -37,
+      ),
+      'views_os2intra_widgets-block_1' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_widgets-block_1',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Markedsplads',
+        'weight' => -37,
+      ),
+      'views_os2intra_widgets-block_3' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_widgets-block_3',
+        'region' => 2,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Seneste referater',
+        'weight' => -37,
+      ),
+      'views_os2intra_group_members-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_group_members-block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
         'title' => 'Gruppens medlemmere',
-        'weight' => -31,
+        'weight' => -38,
       ),
       'views_13f4c793db1c934a1e6735527564e620' => 
       array (
@@ -173,17 +269,17 @@ function os2intra_base_homebox() {
         'title' => 'Begivenheder',
         'weight' => -27,
       ),
-      'commons_utility_links_commons_utility_links' => 
+      'homebox_custom' => 
       array (
-        'module' => 'commons_utility_links',
-        'delta' => 'commons_utility_links',
+        'module' => 'homebox',
+        'delta' => 'custom',
         'region' => 1,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => 'Links',
-        'weight' => -19,
+        'title' => 'Mine notater',
+        'weight' => -39,
       ),
     ),
     'widths' => 

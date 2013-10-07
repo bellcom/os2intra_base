@@ -10,6 +10,137 @@
 function os2intra_base_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-event-field_os2web_base_field_image'
+  $field_instances['node-event-field_os2web_base_field_image'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_in_partial_form' => 1,
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_base_field_image',
+    'label' => 'Billede',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_required' => 0,
+      'default_image' => 0,
+      'file_directory' => 'uploads',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'title_field_required' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'application' => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_os2web_base_field_media'
+  $field_instances['node-event-field_os2web_base_field_media'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_in_partial_form' => 1,
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_base_field_media',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'uploads/movies',
+      'file_extensions' => 'mp4',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'application' => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 'upload',
+          'youtube' => 'youtube',
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-group-field_os2intra_grouptype'
   $field_instances['node-group-field_os2intra_grouptype'] = array(
     'bundle' => 'group',
@@ -89,6 +220,145 @@ function os2intra_base_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-post-field_os2web_base_field_image'
+  $field_instances['node-post-field_os2web_base_field_image'] = array(
+    'bundle' => 'post',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_in_partial_form' => 1,
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_base_field_image',
+    'label' => 'Billede',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'alt_field_required' => 0,
+      'default_image' => 0,
+      'file_directory' => 'uploads',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'title_field_required' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'application' => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-post-field_os2web_base_field_media'
+  $field_instances['node-post-field_os2web_base_field_media'] = array(
+    'bundle' => 'post',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'autoplay' => FALSE,
+          'controls' => TRUE,
+          'height' => NULL,
+          'loop' => FALSE,
+          'multiple_file_behavior' => 'tags',
+          'muted' => FALSE,
+          'width' => NULL,
+        ),
+        'type' => 'file_video',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'display_in_partial_form' => 1,
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_base_field_media',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'uploads/movies',
+      'file_extensions' => 'mp4',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'application' => 0,
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 'upload',
+          'youtube' => 'youtube',
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 2,
     ),
   );
 
@@ -181,10 +451,12 @@ function os2intra_base_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Billede');
   t('Birthday');
   t('Gruppe Type');
   t('Gruppens Organisation');
   t('Phone');
+  t('Video');
   t('Vælg forældre til denne gruppe. I hvilken organisation er denne afdeling en del af?');
 
   return $field_instances;
