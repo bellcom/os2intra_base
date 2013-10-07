@@ -11,11 +11,15 @@ include_once 'os2intra_base.features.inc';
  */
 function os2intra_base_init(){
   global $user;
+  $allowed_uris = array(
+    '/cron.php',
+    '/xmlrpc.php',
+  );
   $allowed_paths = array(
     'user/login',
     'user/password',
   );
-  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths)) {
+  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths) && !in_array(request_uri(), $allowed_uris) && !drupal_is_cli()) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
   }
 }
