@@ -357,18 +357,19 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['title_field_1']['alter']['text'] = '[type][title_field_1]';
   $handler->display->display_options['fields']['title_field_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_field_1']['link_to_entity'] = 1;
-  /* Felt: Indhold: Group Logo */
-  $handler->display->display_options['fields']['field_group_logo']['id'] = 'field_group_logo';
-  $handler->display->display_options['fields']['field_group_logo']['table'] = 'field_data_field_group_logo';
-  $handler->display->display_options['fields']['field_group_logo']['field'] = 'field_group_logo';
-  $handler->display->display_options['fields']['field_group_logo']['relationship'] = 'og_membership_related_node_group';
-  $handler->display->display_options['fields']['field_group_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_group_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_group_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_group_logo']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+  /* Felt: Indhold: Billede */
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['id'] = 'field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['table'] = 'field_data_field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['field'] = 'field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
   );
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['delta_offset'] = '0';
   /* Felt: Indhold: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -383,6 +384,22 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['last_updated']['field'] = 'last_updated';
   $handler->display->display_options['fields']['last_updated']['label'] = 'Seneste aktivitet';
   $handler->display->display_options['fields']['last_updated']['date_format'] = 'time ago';
+  /* Felt: Indhold: Video */
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['id'] = 'field_os2web_base_field_media';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['table'] = 'field_data_field_os2web_base_field_media';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['field'] = 'field_os2web_base_field_media';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['settings'] = array(
+    'file_view_mode' => 'default',
+  );
+  /* Felt: Indhold: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'Brødtekst';
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -487,6 +504,7 @@ function os2intra_base_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'OS2Intra Intranet';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
@@ -535,6 +553,7 @@ function os2intra_base_views_default_views() {
     t('[type][title_field_1]'),
     t('Gruppe'),
     t('Seneste aktivitet'),
+    t('Brødtekst'),
     t('Alle'),
     t('%1'),
     t('Udgivet'),
