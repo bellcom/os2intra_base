@@ -14,7 +14,6 @@ dependencies[] = homebox
 dependencies[] = homebox_og
 dependencies[] = image
 dependencies[] = media
-dependencies[] = og_field_access
 dependencies[] = options
 dependencies[] = os2web_base
 dependencies[] = taxonomy
