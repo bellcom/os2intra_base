@@ -14,12 +14,11 @@ function os2intra_base_init(){
   $allowed_uris = array(
     '/cron.php',
     '/xmlrpc.php',
+    '/sites/default/files/styles*',
+    '/user/login*',
+    '/user/password*',
   );
-  $allowed_paths = array(
-    'user/login',
-    'user/password',
-  );
-  if ($user->uid == 0 && !in_array(current_path(), $allowed_paths) && !in_array(request_uri(), $allowed_uris) && !drupal_is_cli()) {
+  if ($user->uid == 0 && !drupal_match_path(request_uri(), implode("\n", $allowed_uris)) && !drupal_is_cli()) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
   }
 }
