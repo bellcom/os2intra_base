@@ -102,6 +102,7 @@ function os2intra_base_field_default_field_bases() {
         0 => array(
           'vocabulary' => 'os2intra_organizaiton_tax',
           'parent' => 0,
+          'depth' => '',
         ),
       ),
       'options_list_callback' => 'content_taxonomy_allowed_values',

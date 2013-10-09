@@ -382,7 +382,7 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['last_updated']['field'] = 'last_updated';
   $handler->display->display_options['fields']['last_updated']['label'] = 'Seneste aktivitet';
   $handler->display->display_options['fields']['last_updated']['date_format'] = 'time ago';
-  /* Felt: Indhold: Video */
+  /* Felt: Indhold: Filer */
   $handler->display->display_options['fields']['field_os2web_base_field_media']['id'] = 'field_os2web_base_field_media';
   $handler->display->display_options['fields']['field_os2web_base_field_media']['table'] = 'field_data_field_os2web_base_field_media';
   $handler->display->display_options['fields']['field_os2web_base_field_media']['field'] = 'field_os2web_base_field_media';
@@ -417,16 +417,11 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['relationship'] = 'og_membership_related_node_group';
   $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['argument'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'node';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '3';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['break_phrase'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '6';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -548,8 +543,8 @@ function os2intra_base_views_default_views() {
     6 => 0,
   );
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  /* Display: Content pane gruppe hieraki */
+  $handler = $view->new_display('panel_pane', 'Content pane gruppe hieraki', 'panel_pane_1');
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'OS2Intra Intranet';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -575,6 +570,23 @@ function os2intra_base_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Content pane bruger gruppe */
+  $handler = $view->new_display('panel_pane', 'Content pane bruger gruppe', 'panel_pane_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Indhold: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['nid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['title'] = '%1';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $translatables['os2intra_group_term_activity'] = array(
     t('Master'),
     t('OS2intra Group Term Activity'),
@@ -594,13 +606,15 @@ function os2intra_base_views_default_views() {
     t('Seneste aktivitet'),
     t('Læs mere'),
     t('Alle'),
-    t('%1'),
     t('Udgivet'),
     t('Type'),
     t('Navn'),
-    t('Content pane'),
+    t('Content pane gruppe hieraki'),
     t('OS2Intra Intranet'),
     t('Block'),
+    t('Content pane bruger gruppe'),
+    t('%1'),
+    t('View panes'),
   );
   $export['os2intra_group_term_activity'] = $view;
 

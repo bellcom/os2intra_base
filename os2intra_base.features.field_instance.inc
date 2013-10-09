@@ -208,7 +208,7 @@ function os2intra_base_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_os2intra_organization',
     'label' => 'Gruppens Organisation',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -216,7 +216,7 @@ function os2intra_base_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'content_taxonomy_opt_groups' => FALSE,
+        'content_taxonomy_opt_groups' => 0,
       ),
       'type' => 'options_select',
       'weight' => 44,
@@ -303,15 +303,9 @@ function os2intra_base_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'autoplay' => FALSE,
-          'controls' => TRUE,
-          'height' => NULL,
-          'loop' => FALSE,
-          'multiple_file_behavior' => 'tags',
-          'muted' => FALSE,
-          'width' => NULL,
+          'file_view_mode' => 'default',
         ),
-        'type' => 'file_video',
+        'type' => 'file_rendered',
         'weight' => 3,
       ),
       'teaser' => array(
