@@ -42,6 +42,7 @@ features[homebox][] = os2intra_homebox_group
 features[page_manager_handlers][] = node_edit_panel_context_3
 features[page_manager_handlers][] = node_view_panel_context_2
 features[page_manager_handlers][] = node_view_panel_context_5
+features[page_manager_pages][] = forside
 features[taxonomy][] = os2intra_organizaiton_tax
 features[taxonomy][] = os2intra_tax_group_type
 features[views_view][] = os2intra_group_events
