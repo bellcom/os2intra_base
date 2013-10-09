@@ -42,6 +42,18 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'views_e63027de301d7e4fb4a803451a676d7c' => 
+      array (
+        'module' => 'views',
+        'delta' => 'e63027de301d7e4fb4a803451a676d7c',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Kommende begivenheder',
+        'weight' => -43,
+      ),
       'views_os2intra_random_user-block' => 
       array (
         'module' => 'views',
@@ -137,18 +149,6 @@ function os2intra_base_homebox() {
         'closable' => 1,
         'title' => 'Brugere',
         'weight' => -32,
-      ),
-      'views_7732143edc5e5a96528c9ad88958a764' => 
-      array (
-        'module' => 'views',
-        'delta' => '7732143edc5e5a96528c9ad88958a764',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Begivenheder',
-        'weight' => -31,
       ),
       'views_os2intra_canteen_menu-block' => 
       array (
