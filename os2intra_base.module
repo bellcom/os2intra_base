@@ -12,7 +12,7 @@ include_once 'os2intra_base.features.inc';
 function os2intra_base_init(){
   global $user;
   $allowed_uris = array(
-    '/cron.php',
+    '/cron.php*',
     '/xmlrpc.php',
     '/sites/default/files/styles*',
     '/user/login*',
