@@ -26,6 +26,16 @@ function os2intra_base_field_default_field_instances() {
         'type' => 'image',
         'weight' => 13,
       ),
+      'print' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -87,6 +97,13 @@ function os2intra_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 14,
+      ),
+      'print' => array(
         'label' => 'above',
         'module' => 'file',
         'settings' => array(),
@@ -235,7 +252,17 @@ function os2intra_base_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 3,
+      ),
+      'print' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -304,7 +331,16 @@ function os2intra_base_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 3,
+        'weight' => 2,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -373,12 +409,6 @@ function os2intra_base_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 14,
       ),
-      'search_results' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
     ),
     'display_in_partial_form' => 0,
     'entity_type' => 'user',
@@ -425,12 +455,6 @@ function os2intra_base_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 18,
-      ),
-      'search_results' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
       ),
     ),
     'display_in_partial_form' => 0,

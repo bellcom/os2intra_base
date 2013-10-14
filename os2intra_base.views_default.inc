@@ -178,7 +178,7 @@ function os2intra_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'OS2intra Group Members';
+  $handler->display->display_options['title'] = 'Medlemmer i gruppen';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -267,7 +267,7 @@ function os2intra_base_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['os2intra_group_members'] = array(
     t('Master'),
-    t('OS2intra Group Members'),
+    t('Medlemmer i gruppen'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -634,6 +634,7 @@ function os2intra_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Grupper du er medlem af';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -740,6 +741,7 @@ function os2intra_base_views_default_views() {
   $handler = $view->new_display('block', 'Blok', 'block_1');
   $translatables['os2intra_user_groups'] = array(
     t('Master'),
+    t('Grupper du er medlem af'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -777,7 +779,7 @@ function os2intra_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'OS2intra Users Content';
+  $handler->display->display_options['title'] = 'Dit indhold';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -879,7 +881,7 @@ function os2intra_base_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['os2intra_users_content'] = array(
     t('Master'),
-    t('OS2intra Users Content'),
+    t('Dit indhold'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -912,7 +914,7 @@ function os2intra_base_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'OS2intra Users search';
+  $handler->display->display_options['title'] = 'Brugere';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
@@ -1026,7 +1028,7 @@ function os2intra_base_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['os2intra_users_search'] = array(
     t('Master'),
-    t('OS2intra Users search'),
+    t('Brugere'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
