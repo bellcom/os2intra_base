@@ -49,6 +49,5 @@ features[views_view][] = os2intra_group_events
 features[views_view][] = os2intra_group_members
 features[views_view][] = os2intra_group_term_activity
 features[views_view][] = os2intra_user_groups
-features[views_view][] = os2intra_users_content
 features[views_view][] = os2intra_users_search
 project path = sites/all/modules/os2web
