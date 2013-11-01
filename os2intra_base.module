@@ -81,3 +81,13 @@ function os2intra_base_block_view($delta='') {
   }
   return $block;
 }
+
+/**
+ * Implements hook_wysiwyg_editor_settings_alter().
+ */
+function os2intra_base_wysiwyg_editor_settings_alter(&$settings, $context) {
+  if ($context['profile']->editor == 'ckeditor') {
+    // Using ckeditor, set custom config file.
+    $settings['customConfig'] = base_path() . drupal_get_path('module', 'os2intra_base') . '/js/os2intra_base_ckeditor_config.js';
+  }
+}
