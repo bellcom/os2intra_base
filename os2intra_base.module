@@ -16,7 +16,9 @@ function os2intra_base_init(){
     '/xmlrpc.php',
     '/sites/default/files/styles*',
     '/user/login*',
+    '/user/reset*',
     '/user/password*',
+    '/useractivation',
   );
   if ($user->uid == 0 && !drupal_match_path(request_uri(), implode("\n", $allowed_uris)) && !drupal_is_cli()) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
