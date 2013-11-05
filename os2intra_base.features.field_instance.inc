@@ -24,7 +24,7 @@ function os2intra_base_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 13,
+        'weight' => 7,
       ),
       'print' => array(
         'label' => 'above',
@@ -101,7 +101,7 @@ function os2intra_base_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 14,
+        'weight' => 8,
       ),
       'print' => array(
         'label' => 'above',
@@ -155,6 +155,55 @@ function os2intra_base_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-group-field_os2intra_base_spotboxes'
+  $field_instances['node-group-field_os2intra_base_spotboxes'] = array(
+    'bundle' => 'group',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_os2intra_base_spotboxes',
+    'label' => 'Spotbokse',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 52,
     ),
   );
 
@@ -235,6 +284,66 @@ function os2intra_base_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-group-field_os2web_base_field_media'
+  $field_instances['node-group-field_os2web_base_field_media'] = array(
+    'bundle' => 'group',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_base_field_media',
+    'label' => 'Filer',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'doc pdf xls xlsx docx ppt pptx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'application' => 0,
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 54,
     ),
   );
 
@@ -481,9 +590,11 @@ function os2intra_base_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Billede');
   t('Birthday');
+  t('Filer');
   t('Gruppe Type');
   t('Gruppens Organisation');
   t('Phone');
+  t('Spotbokse');
   t('Video');
   t('Vælg forældre til denne gruppe. I hvilken organisation er denne afdeling en del af?');
 

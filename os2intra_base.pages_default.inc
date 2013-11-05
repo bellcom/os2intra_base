@@ -954,29 +954,6 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-30'] = $pane;
     $display->panels['three_25_50_25_third'][0] = 'new-30';
-    $pane = new stdClass();
-    $pane->pid = 'new-31';
-    $pane->panel = 'three_25_50_25_top';
-    $pane->type = 'page_tabs';
-    $pane->subtype = 'page_tabs';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'both',
-      'id' => 'tabs',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-31'] = $pane;
-    $display->panels['three_25_50_25_top'][0] = 'new-31';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
