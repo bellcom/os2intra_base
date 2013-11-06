@@ -383,21 +383,7 @@ function os2intra_base_views_default_views() {
   );
   $handler->display->display_options['fields']['field_os2web_base_field_image']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_base_field_image']['delta_offset'] = '0';
-  /* Felt: Indhold: Title */
-  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
-  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['relationship'] = 'og_membership_related_node_group';
-  $handler->display->display_options['fields']['title_field']['label'] = 'Gruppe';
-  $handler->display->display_options['fields']['title_field']['element_type'] = 'span';
-  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
-  /* Felt: Indhold: Opdateret/kommenteret dato */
-  $handler->display->display_options['fields']['last_updated']['id'] = 'last_updated';
-  $handler->display->display_options['fields']['last_updated']['table'] = 'node_comment_statistics';
-  $handler->display->display_options['fields']['last_updated']['field'] = 'last_updated';
-  $handler->display->display_options['fields']['last_updated']['label'] = 'Seneste aktivitet';
-  $handler->display->display_options['fields']['last_updated']['date_format'] = 'time ago';
-  /* Felt: Indhold: Video */
+  /* Felt: Indhold: Filer */
   $handler->display->display_options['fields']['field_os2web_base_field_media']['id'] = 'field_os2web_base_field_media';
   $handler->display->display_options['fields']['field_os2web_base_field_media']['table'] = 'field_data_field_os2web_base_field_media';
   $handler->display->display_options['fields']['field_os2web_base_field_media']['field'] = 'field_os2web_base_field_media';
@@ -414,7 +400,6 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '140';
-  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Læs mere';
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
@@ -436,8 +421,31 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['element_type'] = 'span';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comment_count']['element_wrapper_class'] = 'comment-count-indicator';
+  /* Felt: Opdateret/kommenteret dato (Excluded) */
+  $handler->display->display_options['fields']['last_updated']['id'] = 'last_updated';
+  $handler->display->display_options['fields']['last_updated']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['last_updated']['field'] = 'last_updated';
+  $handler->display->display_options['fields']['last_updated']['ui_name'] = 'Opdateret/kommenteret dato (Excluded)';
+  $handler->display->display_options['fields']['last_updated']['label'] = '';
+  $handler->display->display_options['fields']['last_updated']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['last_updated']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['last_updated']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['last_updated']['date_format'] = 'time ago';
+  /* Felt: Group Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['fields']['title_field']['ui_name'] = 'Group Title';
+  $handler->display->display_options['fields']['title_field']['label'] = '';
+  $handler->display->display_options['fields']['title_field']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_field']['alter']['text'] = '[last_updated] i [title_field]';
+  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field']['element_wrapper_class'] = 'group-title';
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
   /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -635,15 +643,15 @@ function os2intra_base_views_default_views() {
     t('Stemmer'),
     t(' '),
     t('[type][title_field_1]'),
-    t('Gruppe'),
-    t('Seneste aktivitet'),
     t('Læs mere'),
     t('.'),
     t(','),
+    t('[last_updated] i [title_field]'),
     t('Alle'),
     t('Udgivet'),
     t('Type'),
     t('Navn'),
+    t('Gruppe'),
     t('Content pane gruppe hieraki'),
     t('OS2Intra Intranet'),
     t('Block'),
