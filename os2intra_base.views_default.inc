@@ -548,7 +548,7 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['filters']['realname']['operator'] = 'contains';
   $handler->display->display_options['filters']['realname']['exposed'] = TRUE;
   $handler->display->display_options['filters']['realname']['expose']['operator_id'] = 'realname_op';
-  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Navn';
+  $handler->display->display_options['filters']['realname']['expose']['label'] = 'Forfatter';
   $handler->display->display_options['filters']['realname']['expose']['operator'] = 'realname_op';
   $handler->display->display_options['filters']['realname']['expose']['identifier'] = 'realname';
   $handler->display->display_options['filters']['realname']['expose']['remember_roles'] = array(
@@ -650,7 +650,7 @@ function os2intra_base_views_default_views() {
     t('Alle'),
     t('Udgivet'),
     t('Type'),
-    t('Navn'),
+    t('Forfatter'),
     t('Gruppe'),
     t('Content pane gruppe hieraki'),
     t('OS2Intra Intranet'),
