@@ -80,7 +80,7 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['capacity_used']['label'] = '';
   $handler->display->display_options['fields']['capacity_used']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['capacity_used']['separator'] = '';
-  $handler->display->display_options['fields']['capacity_used']['suffix'] = ' attendees';
+  $handler->display->display_options['fields']['capacity_used']['suffix'] = 'deltagere';
   /* Felt: Indhold: Kommentarantal */
   $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
@@ -157,7 +157,7 @@ function os2intra_base_views_default_views() {
     t('sidste »'),
     t('OG membership from node'),
     t('.'),
-    t(' attendees'),
+    t('deltagere'),
     t('[comment_count] comments'),
     t(','),
     t('Alle'),
@@ -736,7 +736,7 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['arguments']['etid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['etid']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['etid']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['etid']['title'] = '%1\'s groups';
+  $handler->display->display_options['arguments']['etid']['title'] = '%1\'s grupper';
   $handler->display->display_options['arguments']['etid']['default_argument_type'] = 'current_user';
   $handler->display->display_options['arguments']['etid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['etid']['summary']['format'] = 'default_summary';
@@ -799,7 +799,7 @@ function os2intra_base_views_default_views() {
     t('Gruppe'),
     t('Medlem siden'),
     t('Alle'),
-    t('%1\'s groups'),
+    t('%1\'s grupper'),
     t('Content pane'),
     t('View panes'),
     t('Blok'),

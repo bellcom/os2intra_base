@@ -54,18 +54,6 @@ function os2intra_base_homebox() {
         'title' => 'Kommende begivenheder',
         'weight' => -43,
       ),
-      'views_os2intra_random_user-block' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_random_user-block',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Tilfældige brugere',
-        'weight' => -37,
-      ),
       'views_os2intra_widgets-block_2' => 
       array (
         'module' => 'views',
