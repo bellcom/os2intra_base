@@ -1084,7 +1084,7 @@ function os2intra_base_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'three_25_50_25';
+  $display->layout = 'flexible:os2intra_45_40_15';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -1107,64 +1107,7 @@ function os2intra_base_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'three_25_50_25_first';
-    $pane->type = 'views';
-    $pane->subtype = 'os2intra_message_notifications';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '5',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'override_title' => 1,
-      'override_title_text' => 'Vigtige meddelelser',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['three_25_50_25_first'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'three_25_50_25_first';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'os2intra_group_term_activity-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'term_node_tid_depth' => '1',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Seneste aktivitet',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['three_25_50_25_first'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'three_25_50_25_second';
+    $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'os2intra_base-os2intra_homebox_front';
     $pane->shown = TRUE;
@@ -1181,11 +1124,11 @@ function os2intra_base_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['three_25_50_25_second'][0] = 'new-3';
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'three_25_50_25_third';
+    $pane->pid = 'new-2';
+    $pane->panel = 'spots';
     $pane->type = 'views';
     $pane->subtype = 'spotbox';
     $pane->shown = TRUE;
@@ -1214,8 +1157,65 @@ function os2intra_base_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['spots'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'stream';
+    $pane->type = 'views';
+    $pane->subtype = 'os2intra_message_notifications';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'override_title' => 1,
+      'override_title_text' => 'Vigtige meddelelser',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['stream'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'stream';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2intra_group_term_activity-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'term_node_tid_depth' => '1',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Seneste aktivitet',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-4';
+    $display->panels['stream'][1] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
