@@ -207,6 +207,30 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'homebox_custom' => 
+      array (
+        'module' => 'homebox',
+        'delta' => 'custom',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Mine notater',
+        'weight' => -48,
+      ),
+      'views_os2intra_group_members-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_group_members-block',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Gruppens medlemmere',
+        'weight' => -47,
+      ),
       'views_os2intra_widgets-block_2' => 
       array (
         'module' => 'views',
@@ -243,18 +267,6 @@ function os2intra_base_homebox() {
         'title' => 'Seneste referater',
         'weight' => -37,
       ),
-      'views_os2intra_group_members-block' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_group_members-block',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Gruppens medlemmere',
-        'weight' => -38,
-      ),
       'views_13f4c793db1c934a1e6735527564e620' => 
       array (
         'module' => 'views',
@@ -267,17 +279,17 @@ function os2intra_base_homebox() {
         'title' => 'Begivenheder',
         'weight' => -27,
       ),
-      'homebox_custom' => 
+      'views_os2intra_group_documents-block' => 
       array (
-        'module' => 'homebox',
-        'delta' => 'custom',
+        'module' => 'views',
+        'delta' => 'os2intra_group_documents-block',
         'region' => 1,
-        'movable' => 1,
+        'movable' => 0,
         'status' => 1,
         'open' => 1,
-        'closable' => 1,
-        'title' => 'Mine notater',
-        'weight' => -39,
+        'closable' => 0,
+        'title' => 'Dokumenter',
+        'weight' => -49,
       ),
     ),
     'widths' => 
