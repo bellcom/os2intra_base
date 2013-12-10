@@ -457,15 +457,15 @@ function os2intra_base_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'display_in_partial_form' => 1,
+    'display_in_partial_form' => 0,
     'entity_type' => 'node',
     'field_name' => 'field_os2web_base_field_media',
-    'label' => 'Video',
+    'label' => 'Filer og media',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
-      'file_directory' => 'uploads/movies',
-      'file_extensions' => 'mp4',
+      'file_directory' => 'uploads',
+      'file_extensions' => 'mp4 doc docx xls xlsx ppt pptx pdf txt csv odt indd png jpeg jpg',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -474,14 +474,15 @@ function os2intra_base_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'public' => 'public',
+          'private' => 'private',
+          'public' => 0,
           'youtube' => 'youtube',
         ),
         'allowed_types' => array(
-          'application' => 0,
-          'audio' => 0,
-          'document' => 0,
-          'image' => 0,
+          'application' => 'application',
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
           'video' => 'video',
         ),
         'browser_plugins' => array(
@@ -516,6 +517,12 @@ function os2intra_base_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 9,
+      ),
+      'search_results' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'display_in_partial_form' => 0,
@@ -564,6 +571,12 @@ function os2intra_base_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 10,
       ),
+      'search_results' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'display_in_partial_form' => 0,
     'entity_type' => 'user',
@@ -590,6 +603,7 @@ function os2intra_base_field_default_field_instances() {
   t('Billede');
   t('Birthday');
   t('Filer');
+  t('Filer og media');
   t('Gruppe Type');
   t('Gruppens Organisation');
   t('Phone');
