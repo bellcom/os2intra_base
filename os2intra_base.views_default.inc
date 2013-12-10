@@ -394,6 +394,8 @@ function os2intra_base_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_base_field_media']['settings'] = array(
     'file_view_mode' => 'default',
   );
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_os2web_base_field_media']['multi_type'] = 'ul';
   /* Felt: Indhold: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
