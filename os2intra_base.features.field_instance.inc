@@ -168,12 +168,9 @@ function os2intra_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -222,7 +219,7 @@ function os2intra_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -259,7 +256,7 @@ function os2intra_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -297,7 +294,7 @@ function os2intra_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -353,14 +350,14 @@ function os2intra_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'os2intra_side',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'print' => array(
         'label' => 'above',
@@ -434,12 +431,9 @@ function os2intra_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'default',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -476,10 +470,10 @@ function os2intra_base_field_default_field_instances() {
         'allowed_schemes' => array(
           'private' => 'private',
           'public' => 0,
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
-          'application' => 'application',
+          'application' => 0,
           'audio' => 'audio',
           'document' => 'document',
           'image' => 'image',
@@ -487,8 +481,8 @@ function os2intra_base_field_default_field_instances() {
         ),
         'browser_plugins' => array(
           'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
           'upload' => 'upload',
           'youtube' => 'youtube',
         ),

@@ -55,4 +55,5 @@ features[views_view][] = os2intra_group_members
 features[views_view][] = os2intra_group_term_activity
 features[views_view][] = os2intra_user_groups
 features[views_view][] = os2intra_users_search
+features_exclude[field][taxonomy_term-os2intra_organizaiton_tax-field_os2intra_department_id] = taxonomy_term-os2intra_organizaiton_tax-field_os2intra_department_id
 project path = sites/all/modules/os2web
