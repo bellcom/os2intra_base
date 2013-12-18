@@ -23,6 +23,27 @@ function os2intra_base_init(){
   if ($user->uid == 0 && !drupal_match_path(request_uri(), implode("\n", $allowed_uris)) && !drupal_is_cli()) {
     drupal_goto('user/login', array('query' => array('destination' => current_path())));
   }
+
+  // We want to send the user to the node, referenced to the term.
+  if (arg(1) == 'term' && is_numeric(arg(2)) && !arg(3)) {
+    $term = taxonomy_term_load(arg(2));
+
+    // So we check if the term is from the right vocabulary.
+    if($term->vocabulary_machine_name == 'os2intra_organizaiton_tax'){
+      // And we then get the node referenced to the term.
+      $query = new EntityFieldQuery();
+      $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'group')
+        ->propertyCondition('status', 1)
+        ->fieldCondition('field_os2intra_organization', 'tid', arg(2), '=');
+      $result = $query->execute();
+
+      if(!empty($result)){
+        // Off you go.
+        drupal_goto('node/' . key(array_shift($result)) );
+      }
+    }
+  }
 }
 
 /**
@@ -40,7 +61,6 @@ function os2intra_base_views_pre_render(&$view) {
       }
     }
   }
-  
 
   // Remove all groups which are of an organization type.  
   if($view->name == "commons_groups_directory") {
@@ -93,7 +113,6 @@ function os2intra_base_wysiwyg_editor_settings_alter(&$settings, $context) {
     $settings['customConfig'] = base_path() . drupal_get_path('module', 'os2intra_base') . '/js/os2intra_base_ckeditor_config.js';
   }
 }
-
 
 /**
  * Implements hook_form_alter().
