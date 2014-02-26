@@ -37,6 +37,7 @@ function os2intra_base_default_page_manager_handlers() {
               'event' => 'event',
               'post' => 'post',
               'wiki' => 'wiki',
+              'os2intra_canteen_menu' => 'os2intra_canteen_menu',
               'poll' => 'poll',
             ),
           ),
@@ -68,7 +69,7 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:body';
+    $pane->subtype = 'node:field_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -92,7 +93,7 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->pid = 'new-2';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_os2web_base_field_image';
+    $pane->subtype = 'node:body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -115,11 +116,13 @@ function os2intra_base_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'two_66_33_first';
-    $pane->type = 'form';
-    $pane->subtype = 'form';
+    $pane->type = 'entity_form_field';
+    $pane->subtype = 'node:field_os2web_base_field_image';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'label' => '',
+      'formatter' => '',
       'context' => 'argument_node_edit_1',
       'override_title' => 0,
       'override_title_text' => '',
@@ -136,6 +139,28 @@ function os2intra_base_default_page_manager_handlers() {
     $display->panels['two_66_33_first'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
+    $pane->panel = 'two_66_33_first';
+    $pane->type = 'form';
+    $pane->subtype = 'form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['two_66_33_first'][3] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'two_66_33_first';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_topics';
@@ -154,12 +179,56 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['two_66_33_first'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['two_66_33_first'][4] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
+    $pane->panel = 'two_66_33_second';
+    $pane->type = 'node_form_buttons';
+    $pane->subtype = 'node_form_buttons';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['two_66_33_second'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'two_66_33_second';
+    $pane->type = 'node_form_buttons';
+    $pane->subtype = 'node_form_buttons';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['two_66_33_second'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -180,37 +249,15 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['two_66_33_second'][0] = 'new-5';
+    $display->content['new-8'] = $pane;
+    $display->panels['two_66_33_second'][2] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'two_66_33_second';
-    $pane->type = 'node_form_buttons';
-    $pane->subtype = 'node_form_buttons';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_node_edit_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['two_66_33_second'][1] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-9';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_date';
+    $pane->subtype = 'node:field_logo';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -226,12 +273,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['two_66_33_second'][2] = 'new-7';
+    $display->content['new-9'] = $pane;
+    $display->panels['two_66_33_second'][3] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-10';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_address';
@@ -250,12 +297,36 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['two_66_33_second'][3] = 'new-8';
+    $display->content['new-10'] = $pane;
+    $display->panels['two_66_33_second'][4] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-11';
+    $pane->panel = 'two_66_33_second';
+    $pane->type = 'entity_form_field';
+    $pane->subtype = 'node:field_offsite_url';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => '',
+      'formatter' => '',
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['two_66_33_second'][5] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_location';
@@ -274,12 +345,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['two_66_33_second'][4] = 'new-9';
+    $display->content['new-12'] = $pane;
+    $display->panels['two_66_33_second'][6] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-13';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_os2web_base_field_media';
@@ -298,12 +369,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['two_66_33_second'][5] = 'new-10';
+    $display->content['new-13'] = $pane;
+    $display->panels['two_66_33_second'][7] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-11';
+    $pane->pid = 'new-14';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:og_group_ref';
@@ -322,12 +393,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['two_66_33_second'][6] = 'new-11';
+    $display->content['new-14'] = $pane;
+    $display->panels['two_66_33_second'][8] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-15';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_organizers';
@@ -346,12 +417,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 9;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['two_66_33_second'][7] = 'new-12';
+    $display->content['new-15'] = $pane;
+    $display->panels['two_66_33_second'][9] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-16';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_registration';
@@ -370,12 +441,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 10;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['two_66_33_second'][8] = 'new-13';
+    $display->content['new-16'] = $pane;
+    $display->panels['two_66_33_second'][10] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-17';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_registration_type';
@@ -394,12 +465,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 11;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['two_66_33_second'][9] = 'new-14';
+    $display->content['new-17'] = $pane;
+    $display->panels['two_66_33_second'][11] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-18';
     $pane->panel = 'two_66_33_second';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:field_number_of_attendees';
@@ -418,12 +489,34 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 12;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['two_66_33_second'][10] = 'new-15';
+    $display->content['new-18'] = $pane;
+    $display->panels['two_66_33_second'][12] = 'new-18';
     $pane = new stdClass();
-    $pane->pid = 'new-16';
+    $pane->pid = 'new-19';
+    $pane->panel = 'two_66_33_second';
+    $pane->type = 'node_form_buttons';
+    $pane->subtype = 'node_form_buttons';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 13;
+    $pane->locks = array();
+    $display->content['new-19'] = $pane;
+    $display->panels['two_66_33_second'][13] = 'new-19';
+    $pane = new stdClass();
+    $pane->pid = 'new-20';
     $pane->panel = 'two_66_33_top';
     $pane->type = 'entity_form_field';
     $pane->subtype = 'node:title_field';
@@ -444,8 +537,8 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['two_66_33_top'][0] = 'new-16';
+    $display->content['new-20'] = $pane;
+    $display->panels['two_66_33_top'][0] = 'new-20';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -536,30 +629,7 @@ function os2intra_base_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-17';
-    $pane->panel = 'bund';
-    $pane->type = 'entity_view';
-    $pane->subtype = 'node';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['bund'][0] = 'new-17';
-    $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-21';
     $pane->panel = 'center';
     $pane->type = 'block';
     $pane->subtype = 'os2intra_base-os2intra_homebox_group';
@@ -577,10 +647,43 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['center'][0] = 'new-18';
+    $display->content['new-21'] = $pane;
+    $display->panels['center'][0] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
+    $pane->pid = 'new-22';
+    $pane->panel = 'spots';
+    $pane->type = 'node_create_links';
+    $pane->subtype = 'node_create_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'types' => array(
+        'event' => 'event',
+        'group' => 'group',
+        'post' => 'post',
+        'wiki' => 'wiki',
+        'poll' => 'poll',
+      ),
+      'field_name' => 'og_group_ref',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '+ Opret indhold',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'os2intra-actions inner15 marginbot0',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-22'] = $pane;
+    $display->panels['spots'][0] = 'new-22';
+    $pane = new stdClass();
+    $pane->pid = 'new-23';
     $pane->panel = 'spots';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -599,12 +702,12 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['spots'][0] = 'new-19';
+    $display->content['new-23'] = $pane;
+    $display->panels['spots'][1] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-20';
+    $pane->pid = 'new-24';
     $pane->panel = 'spots';
     $pane->type = 'views_panes';
     $pane->subtype = 'spotbox-panel_pane_1';
@@ -623,12 +726,30 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['spots'][1] = 'new-20';
+    $display->content['new-24'] = $pane;
+    $display->panels['spots'][2] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-21';
+    $pane->pid = 'new-25';
+    $pane->panel = 'spots';
+    $pane->type = 'page_actions';
+    $pane->subtype = 'page_actions';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-25'] = $pane;
+    $display->panels['spots'][3] = 'new-25';
+    $pane = new stdClass();
+    $pane->pid = 'new-26';
     $pane->panel = 'stream';
     $pane->type = 'views';
     $pane->subtype = 'os2intra_message_notifications';
@@ -658,40 +779,10 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['stream'][0] = 'new-21';
+    $display->content['new-26'] = $pane;
+    $display->panels['stream'][0] = 'new-26';
     $pane = new stdClass();
-    $pane->pid = 'new-22';
-    $pane->panel = 'stream';
-    $pane->type = 'node_create_links';
-    $pane->subtype = 'node_create_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'types' => array(
-        'event' => 'event',
-        'group' => 'group',
-        'post' => 'post',
-        'wiki' => 'wiki',
-        'poll' => 'poll',
-      ),
-      'field_name' => 'og_group_ref',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '+ Opret indhold',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['stream'][1] = 'new-22';
-    $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-27';
     $pane->panel = 'stream';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2intra_group_term_activity-panel_pane_1';
@@ -713,12 +804,36 @@ function os2intra_base_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-27'] = $pane;
+    $display->panels['stream'][1] = 'new-27';
+    $pane = new stdClass();
+    $pane->pid = 'new-28';
+    $pane->panel = 'stream';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2intra_group_term_activity-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'term_node_tid_depth' => '%os2intra_tax_grouptype:tid',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['stream'][2] = 'new-23';
+    $display->content['new-28'] = $pane;
+    $display->panels['stream'][2] = 'new-28';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-29';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2intra_group_wiki_pages-panel_pane_1';
@@ -739,8 +854,61 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['top'][0] = 'new-24';
+    $display->content['new-29'] = $pane;
+    $display->panels['top'][0] = 'new-29';
+    $pane = new stdClass();
+    $pane->pid = 'new-30';
+    $pane->panel = 'top';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 0,
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-30'] = $pane;
+    $display->panels['top'][1] = 'new-30';
+    $pane = new stdClass();
+    $pane->pid = 'new-31';
+    $pane->panel = 'top';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-31'] = $pane;
+    $display->panels['top'][2] = 'new-31';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -757,7 +925,7 @@ function os2intra_base_default_page_manager_handlers() {
   $handler->conf = array(
     'title' => 'Bruger gruppe forside',
     'no_blocks' => 0,
-    'pipeline' => 'ipe',
+    'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
@@ -790,7 +958,7 @@ function os2intra_base_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'three_25_50_25';
+  $display->layout = 'flexible:os2intra_45_40_15';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -805,6 +973,10 @@ function os2intra_base_default_page_manager_handlers() {
       'three_25_50_25_second' => NULL,
       'three_25_50_25_third' => NULL,
       'three_25_50_25_bottom' => NULL,
+      'center' => NULL,
+      'spots' => NULL,
+      'stream' => NULL,
+      'bund' => NULL,
     ),
   );
   $display->cache = array();
@@ -812,8 +984,164 @@ function os2intra_base_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-25';
-    $pane->panel = 'three_25_50_25_first';
+    $pane->pid = 'new-32';
+    $pane->panel = 'center';
+    $pane->type = 'block';
+    $pane->subtype = 'os2intra_base-os2intra_homebox_group';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-32'] = $pane;
+    $display->panels['center'][0] = 'new-32';
+    $pane = new stdClass();
+    $pane->pid = 'new-33';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'activity_group-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '0',
+      'arguments' => array(
+        'gid' => '%node:nid',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-33'] = $pane;
+    $display->panels['center'][1] = 'new-33';
+    $pane = new stdClass();
+    $pane->pid = 'new-34';
+    $pane->panel = 'spots';
+    $pane->type = 'node_create_links';
+    $pane->subtype = 'node_create_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'types' => array(
+        'event' => 'event',
+        'group' => 'group',
+        'post' => 'post',
+        'wiki' => 'wiki',
+        'poll' => 'poll',
+      ),
+      'field_name' => 'og_group_ref',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '+ Opret indhold',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'os2intra-actions inner15 marginbot0',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-34'] = $pane;
+    $display->panels['spots'][0] = 'new-34';
+    $pane = new stdClass();
+    $pane->pid = 'new-35';
+    $pane->panel = 'spots';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Node Basket',
+      'title' => '',
+      'body' => '<div id="node-basket"></div>',
+      'format' => 'plain_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-35'] = $pane;
+    $display->panels['spots'][1] = 'new-35';
+    $pane = new stdClass();
+    $pane->pid = 'new-36';
+    $pane->panel = 'spots';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_os2web_base_field_media';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'file_table',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-36'] = $pane;
+    $display->panels['spots'][2] = 'new-36';
+    $pane = new stdClass();
+    $pane->pid = 'new-37';
+    $pane->panel = 'spots';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'spotbox-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'nid' => '%node:nid',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-37'] = $pane;
+    $display->panels['spots'][3] = 'new-37';
+    $pane = new stdClass();
+    $pane->pid = 'new-38';
+    $pane->panel = 'stream';
     $pane->type = 'views';
     $pane->subtype = 'os2intra_message_notifications';
     $pane->shown = FALSE;
@@ -842,14 +1170,14 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['three_25_50_25_first'][0] = 'new-25';
+    $display->content['new-38'] = $pane;
+    $display->panels['stream'][0] = 'new-38';
     $pane = new stdClass();
-    $pane->pid = 'new-26';
-    $pane->panel = 'three_25_50_25_first';
+    $pane->pid = 'new-39';
+    $pane->panel = 'stream';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2intra_group_term_activity-panel_pane_2';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array();
     $pane->cache = array();
@@ -860,100 +1188,19 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-26'] = $pane;
-    $display->panels['three_25_50_25_first'][1] = 'new-26';
+    $display->content['new-39'] = $pane;
+    $display->panels['stream'][1] = 'new-39';
     $pane = new stdClass();
-    $pane->pid = 'new-27';
-    $pane->panel = 'three_25_50_25_second';
-    $pane->type = 'block';
-    $pane->subtype = 'os2intra_base-os2intra_homebox_group';
+    $pane->pid = 'new-40';
+    $pane->panel = 'stream';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'os2intra_group_nodes-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-27'] = $pane;
-    $display->panels['three_25_50_25_second'][0] = 'new-27';
-    $pane = new stdClass();
-    $pane->pid = 'new-28';
-    $pane->panel = 'three_25_50_25_third';
-    $pane->type = 'node_create_links';
-    $pane->subtype = 'node_create_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'types' => array(
-        'event' => 'event',
-        'group' => 'group',
-        'post' => 'post',
-        'wiki' => 'wiki',
-        'poll' => 'poll',
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
       ),
-      'field_name' => 'og_group_ref',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '+ Opret indhold',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['three_25_50_25_third'][0] = 'new-28';
-    $pane = new stdClass();
-    $pane->pid = 'new-29';
-    $pane->panel = 'three_25_50_25_third';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Node Basket',
-      'title' => '',
-      'body' => '<div id="node-basket"></div>',
-      'format' => 'plain_text',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['three_25_50_25_third'][1] = 'new-29';
-    $pane = new stdClass();
-    $pane->pid = 'new-30';
-    $pane->panel = 'three_25_50_25_third';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_os2web_base_field_media';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'title',
-      'formatter' => 'file_table',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -963,35 +1210,11 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['three_25_50_25_third'][2] = 'new-30';
+    $display->content['new-40'] = $pane;
+    $display->panels['stream'][2] = 'new-40';
     $pane = new stdClass();
-    $pane->pid = 'new-31';
-    $pane->panel = 'three_25_50_25_third';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'spotbox-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'arguments' => array(
-        'nid' => '%node:nid',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-31'] = $pane;
-    $display->panels['three_25_50_25_third'][3] = 'new-31';
-    $pane = new stdClass();
-    $pane->pid = 'new-32';
-    $pane->panel = 'three_25_50_25_top';
+    $pane->pid = 'new-41';
+    $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'os2intra_group_wiki_pages-panel_pane_1';
     $pane->shown = TRUE;
@@ -1011,20 +1234,22 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['three_25_50_25_top'][0] = 'new-32';
+    $display->content['new-41'] = $pane;
+    $display->panels['top'][0] = 'new-41';
     $pane = new stdClass();
-    $pane->pid = 'new-33';
-    $pane->panel = 'three_25_50_25_top';
-    $pane->type = 'entity_view';
-    $pane->subtype = 'node';
+    $pane->pid = 'new-42';
+    $pane->panel = 'top';
+    $pane->type = 'node_links';
+    $pane->subtype = 'node_links';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
+      'build_mode' => 'full',
+      'identifier' => '',
+      'link' => 0,
+      'context' => 'argument_entity_id:node_1',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1034,8 +1259,64 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['three_25_50_25_top'][1] = 'new-33';
+    $display->content['new-42'] = $pane;
+    $display->panels['top'][1] = 'new-42';
+    $pane = new stdClass();
+    $pane->pid = 'new-43';
+    $pane->panel = 'top';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'no_extras' => 0,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'teaser',
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-43'] = $pane;
+    $display->panels['top'][2] = 'new-43';
+    $pane = new stdClass();
+    $pane->pid = 'new-44';
+    $pane->panel = 'top';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:body';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-44'] = $pane;
+    $display->panels['top'][3] = 'new-44';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1101,6 +1382,10 @@ function os2intra_base_default_page_manager_pages() {
       'three_33_second' => NULL,
       'three_33_third' => NULL,
       'three_33_bottom' => NULL,
+      'center' => NULL,
+      'spots' => NULL,
+      'stream' => NULL,
+      'bund' => NULL,
     ),
   );
   $display->cache = array();
@@ -1188,7 +1473,10 @@ function os2intra_base_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'os2intra-stream',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

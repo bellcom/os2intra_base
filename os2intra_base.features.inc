@@ -63,7 +63,7 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => 'Intern Høring',
+        'title' => 'Intern høring',
         'weight' => -37,
       ),
       'views_os2intra_widgets-block_1' => 
@@ -99,7 +99,7 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => 'Mine Notater',
+        'title' => 'Mine notater',
         'weight' => -34,
       ),
       'views_os2intra_user_groups-block_1' => 
@@ -111,7 +111,7 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 0,
-        'title' => 'Dine Grupper',
+        'title' => 'Dine grupper',
         'weight' => -34,
       ),
       'os2intra_birthday_block_block' => 
@@ -207,6 +207,42 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
+      'views_f8bfe9273a6958f239d43ba1ecfb151b' => 
+      array (
+        'module' => 'views',
+        'delta' => 'f8bfe9273a6958f239d43ba1ecfb151b',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Dokumentmapper',
+        'weight' => -48,
+      ),
+      'views_os2intra_group_documents-block' => 
+      array (
+        'module' => 'views',
+        'delta' => 'os2intra_group_documents-block',
+        'region' => 1,
+        'movable' => 0,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 0,
+        'title' => 'Dokumenter',
+        'weight' => -50,
+      ),
+      'views_ae656f2983fbef1e5270cccede1d1a9d' => 
+      array (
+        'module' => 'views',
+        'delta' => 'ae656f2983fbef1e5270cccede1d1a9d',
+        'region' => 1,
+        'movable' => 1,
+        'status' => 1,
+        'open' => 1,
+        'closable' => 1,
+        'title' => 'Wiki dokumenter',
+        'weight' => -49,
+      ),
       'homebox_custom' => 
       array (
         'module' => 'homebox',
@@ -217,7 +253,7 @@ function os2intra_base_homebox() {
         'open' => 1,
         'closable' => 1,
         'title' => 'Mine notater',
-        'weight' => -48,
+        'weight' => -47,
       ),
       'views_os2intra_group_members-block' => 
       array (
@@ -228,8 +264,8 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => 'Gruppens medlemmere',
-        'weight' => -47,
+        'title' => 'Medlemmer',
+        'weight' => -46,
       ),
       'views_os2intra_widgets-block_2' => 
       array (
@@ -240,7 +276,7 @@ function os2intra_base_homebox() {
         'status' => 1,
         'open' => 1,
         'closable' => 1,
-        'title' => 'Intern Høring',
+        'title' => 'Intern høring',
         'weight' => -37,
       ),
       'views_os2intra_widgets-block_1' => 
@@ -278,18 +314,6 @@ function os2intra_base_homebox() {
         'closable' => 1,
         'title' => 'Begivenheder',
         'weight' => -27,
-      ),
-      'views_os2intra_group_documents-block' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_group_documents-block',
-        'region' => 1,
-        'movable' => 0,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 0,
-        'title' => 'Dokumenter',
-        'weight' => -49,
       ),
     ),
     'widths' => 
