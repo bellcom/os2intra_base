@@ -78,18 +78,6 @@ function os2intra_base_homebox() {
         'title' => 'Markedsplads',
         'weight' => -37,
       ),
-      'views_os2intra_widgets-block_3' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_widgets-block_3',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Seneste referater',
-        'weight' => -37,
-      ),
       'homebox_custom' => 
       array (
         'module' => 'homebox',
@@ -113,18 +101,6 @@ function os2intra_base_homebox() {
         'closable' => 0,
         'title' => 'Dine grupper',
         'weight' => -34,
-      ),
-      'os2intra_birthday_block_block' => 
-      array (
-        'module' => 'os2intra_birthday_block',
-        'delta' => 'block',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Fødselsdage',
-        'weight' => -33,
       ),
       'views_os2intra_users_search-block' => 
       array (
@@ -207,18 +183,6 @@ function os2intra_base_homebox() {
     ),
     'blocks' => 
     array (
-      'views_f8bfe9273a6958f239d43ba1ecfb151b' => 
-      array (
-        'module' => 'views',
-        'delta' => 'f8bfe9273a6958f239d43ba1ecfb151b',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Dokumentmapper',
-        'weight' => -48,
-      ),
       'views_os2intra_group_documents-block' => 
       array (
         'module' => 'views',
@@ -230,18 +194,6 @@ function os2intra_base_homebox() {
         'closable' => 0,
         'title' => 'Dokumenter',
         'weight' => -50,
-      ),
-      'views_ae656f2983fbef1e5270cccede1d1a9d' => 
-      array (
-        'module' => 'views',
-        'delta' => 'ae656f2983fbef1e5270cccede1d1a9d',
-        'region' => 1,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Wiki dokumenter',
-        'weight' => -49,
       ),
       'homebox_custom' => 
       array (
@@ -259,49 +211,13 @@ function os2intra_base_homebox() {
       array (
         'module' => 'views',
         'delta' => 'os2intra_group_members-block',
-        'region' => 1,
+        'region' => 2,
         'movable' => 1,
         'status' => 1,
         'open' => 1,
         'closable' => 1,
         'title' => 'Medlemmer',
-        'weight' => -46,
-      ),
-      'views_os2intra_widgets-block_2' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_widgets-block_2',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Intern høring',
-        'weight' => -37,
-      ),
-      'views_os2intra_widgets-block_1' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_widgets-block_1',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Markedsplads',
-        'weight' => -37,
-      ),
-      'views_os2intra_widgets-block_3' => 
-      array (
-        'module' => 'views',
-        'delta' => 'os2intra_widgets-block_3',
-        'region' => 2,
-        'movable' => 1,
-        'status' => 1,
-        'open' => 1,
-        'closable' => 1,
-        'title' => 'Seneste referater',
-        'weight' => -37,
+        'weight' => -50,
       ),
       'views_13f4c793db1c934a1e6735527564e620' => 
       array (
@@ -313,7 +229,7 @@ function os2intra_base_homebox() {
         'open' => 1,
         'closable' => 1,
         'title' => 'Begivenheder',
-        'weight' => -27,
+        'weight' => -51,
       ),
     ),
     'widths' => 

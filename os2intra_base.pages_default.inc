@@ -753,7 +753,7 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->panel = 'stream';
     $pane->type = 'views';
     $pane->subtype = 'os2intra_message_notifications';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_pager_settings' => 0,
@@ -921,7 +921,7 @@ function os2intra_base_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Bruger gruppe forside',
     'no_blocks' => 0,
@@ -1092,7 +1092,7 @@ function os2intra_base_default_page_manager_handlers() {
     $pane->panel = 'spots';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_base_field_media';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'title',
@@ -1276,7 +1276,7 @@ function os2intra_base_default_page_manager_handlers() {
       'identifier' => '',
       'link' => 0,
       'leave_node_title' => 0,
-      'build_mode' => 'teaser',
+      'build_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
     );
     $pane->cache = array();
@@ -1467,7 +1467,7 @@ function os2intra_base_default_page_manager_pages() {
       'url' => '',
       'display' => 'default',
       'override_title' => 1,
-      'override_title_text' => 'Vigtige meddelelser',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1491,7 +1491,7 @@ function os2intra_base_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'term_node_tid_depth' => '1',
+        'term_node_tid_depth' => '',
       ),
       'override_title' => 1,
       'override_title_text' => 'Seneste aktivitet',
