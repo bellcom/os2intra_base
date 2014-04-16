@@ -310,6 +310,11 @@ function os2intra_base_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sorteringskriterie: Bruger: First Name (field_name_first) */
+  $handler->display->display_options['sorts']['field_name_first_value']['id'] = 'field_name_first_value';
+  $handler->display->display_options['sorts']['field_name_first_value']['table'] = 'field_data_field_name_first';
+  $handler->display->display_options['sorts']['field_name_first_value']['field'] = 'field_name_first_value';
   $translatables['os2intra_group_members'] = array(
     t('Master'),
     t('Medlemmer i gruppen'),
